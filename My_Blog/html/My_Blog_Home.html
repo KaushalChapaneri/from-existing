@@ -1,0 +1,175 @@
+
+<html>
+<head>
+<title>Untitled Document</title>
+
+<link rel="stylesheet" type="text/css" href="../css/My_Blog_Home.css">
+		
+		
+		<!---------slider starts----->
+		
+			<link rel="stylesheet" type="text/css" href="../Slider/style/slicebox.css" />
+		<link rel="stylesheet" type="text/css" href="../Slider/style/custom.css" />
+		<script type="text/javascript" src="../Slider/js/modernizr.custom.46884.js"></script>
+		<script type="text/javascript" src="../Slider/js/jquery.min.js"></script>
+		<script type="text/javascript" src="../Slider/js/jquery.slicebox.js"></script>
+	 
+		
+		<script type="text/javascript">
+			$(function() {
+				
+				var Page = (function() {
+
+					var $navArrows = $( '#nav-arrows' ).hide(),
+						$shadow = $( '#shadow' ).hide(),
+						slicebox = $( '#sb-slider' ).slicebox( {
+							onReady : function() {
+
+								$navArrows.show();
+								$shadow.show();
+
+							},
+							orientation : 'r',
+							cuboidsRandom : true,
+							disperseFactor : 30
+						} ),
+						
+						init = function() {
+
+							initEvents();
+							
+						},
+						initEvents = function() {
+
+							// add navigation events
+							$navArrows.children( ':first' ).on( 'click', function() {
+
+								slicebox.next();
+								return false;
+
+							} );
+
+							$navArrows.children( ':last' ).on( 'click', function() {
+								
+								slicebox.previous();
+								return false;
+
+							} );
+
+						};
+
+						return { init : init };
+
+				})();
+
+				Page.init();
+
+			});
+		</script>
+							
+							<!----------slider ends----->
+</head>
+<body>
+		
+	<!--------main----->
+	
+	
+	<div class="main">
+	
+			<!-----header ----->
+		<div class="header">
+		</div><!-----header ends---->
+
+
+			<!------slider starts------->
+			<div class="slider">
+		
+		
+				<!-- ========== Wrapper =================== -->
+   
+		   <!-- ========== Slider Start =================== -->
+		   
+		   <div class="wrapper" style="margin-top:10px;">
+
+				<ul id="sb-slider" class="sb-slider">
+					<li>
+						<a href="#" target="_blank"><img src="../Slider/image/1.jpg" alt="image1"/></a>
+						<div class="sb-description">
+							<h2>Kaushal Chapaneri</h2>
+						</div>
+					</li>
+					<li>
+						<a href="#" target="_blank"><img src="../Slider/image/2.jpg" alt="image2"/></a>
+						<div class="sb-description">
+							<h2>Kaushal Chapaneri</h2>
+						</div>
+					</li>
+					<li>
+						<a href="#" target="_blank"><img src="../Slider/image/3.jpg" alt="image1"/></a>
+						<div class="sb-description">
+							<h2>Kaushal Chapaneri</h2>
+						</div>
+					</li>
+					<li>
+						<a href="#" target="_blank"><img src="../Slider/image/4.jpg" alt="image1"/></a>
+						<div class="sb-description">
+							<h2>Kaushal Chapaneri</h2>
+						</div>
+					</li>
+					<li>
+						<a href="#" target="_blank"><img src="../Slider/image/5.jpg" alt="image1"/></a>
+						<div class="sb-description">
+							<h2>Kaushal Chapaneri</23>
+						</div>
+					</li>
+					<li>
+						<a href="#" target="_blank"><img src="../Slider/image/6.jpg" alt="image1"/></a>
+						<div class="sb-description">
+							<h2>Kaushal Chapaneri</h2>
+						</div>
+					</li>
+					<li>
+						<a href="#" target="_blank"><img src="../Slider/image/7.jpg" alt="image1"/></a>
+						<div class="sb-description">
+							<h3>Kaushal Chapaneri</h3>
+						</div>
+					</li>
+					<div id="nav-arrows" class="nav-arrows">
+					<a href="#">Next</a>
+					<a href="#">Previous</a>
+				</div>
+				</ul>
+
+				
+
+				
+
+			</div><!-- /wrapper -->
+		   
+		   
+		   <!-- ========== Slider End=================== -->	
+			
+			</div><!----slider ends--->	
+			
+			<!--------content---->
+			<div class="content">
+		
+				<ul>
+				<li class="menu_li"><a href="My_Blog_Reg.html" class="menu_a"><center>Register</center></a></li>
+				</ul>
+				<ul>
+				<li class="menu_li"><a href="My_Blog_About.html" class="menu_a"><center>About Us</center></a></li>
+				</ul>
+		
+				</div><!------contrnt ends---->
+	
+	<!------footer------>
+	<div class="footer"><b><center>© All Rights Reserved By Kaushal Chapaneri</center></b></div>
+	
+	
+	</div><!----main ends--->
+	
+		
+	
+</body>
+</html>

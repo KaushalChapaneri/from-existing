@@ -1,0 +1,139 @@
+﻿<!-- 
+    Author Name : Piyush Gami
+    Start Date : 11/08/2015
+    End Date :
+    Logical Comment : Task for trainee on 13/08/2015
+-->
+<html>
+<head>
+    <title>Slider</title>
+		 
+        
+		<link rel="stylesheet" type="text/css" href="../style/slicebox.css" />
+		<link rel="stylesheet" type="text/css" href="../style/custom.css" />
+		<script type="text/javascript" src="../js/modernizr.custom.46884.js"></script>
+		<script type="text/javascript" src="../js/jquery.min.js"></script>
+		<script type="text/javascript" src="../js/jquery.slicebox.js"></script>
+	 
+		
+		<script type="text/javascript">
+			$(function() {
+				
+				var Page = (function() {
+
+					var $navArrows = $( '#nav-arrows' ).hide(),
+						$shadow = $( '#shadow' ).hide(),
+						slicebox = $( '#sb-slider' ).slicebox( {
+							onReady : function() {
+
+								$navArrows.show();
+								$shadow.show();
+
+							},
+							orientation : 'r',
+							cuboidsRandom : true,
+							disperseFactor : 30
+						} ),
+						
+						init = function() {
+
+							initEvents();
+							
+						},
+						initEvents = function() {
+
+							// add navigation events
+							$navArrows.children( ':first' ).on( 'click', function() {
+
+								slicebox.next();
+								return false;
+
+							} );
+
+							$navArrows.children( ':last' ).on( 'click', function() {
+								
+								slicebox.previous();
+								return false;
+
+							} );
+
+						};
+
+						return { init : init };
+
+				})();
+
+				Page.init();
+
+			});
+		</script>
+		
+</head>
+<body>
+    <!-- ========== Wrapper =================== -->
+   
+		   <!-- ========== Slider Start =================== -->
+		   
+		   <div class="wrapper" style="margin-top:10px;">
+
+				<ul id="sb-slider" class="sb-slider">
+					<li>
+						<a href="#" target="_blank"><img src="../image/1.jpg" alt="image1"/></a>
+						<div class="sb-description">
+							<h3>Creative Lifesaver</h3>
+						</div>
+					</li>
+					<li>
+						<a href="#" target="_blank"><img src="../image/2.jpg" alt="image2"/></a>
+						<div class="sb-description">
+							<h3>Honest Entertainer</h3>
+						</div>
+					</li>
+					<li>
+						<a href="#" target="_blank"><img src="../image/3.jpg" alt="image1"/></a>
+						<div class="sb-description">
+							<h3>Brave Astronaut</h3>
+						</div>
+					</li>
+					<li>
+						<a href="#" target="_blank"><img src="../image/4.jpg" alt="image1"/></a>
+						<div class="sb-description">
+							<h3>Affectionate Decision Maker</h3>
+						</div>
+					</li>
+					<li>
+						<a href="#" target="_blank"><img src="../image/5.jpg" alt="image1"/></a>
+						<div class="sb-description">
+							<h3>Faithful Investor</h3>
+						</div>
+					</li>
+					<li>
+						<a href="#" target="_blank"><img src="../image/6.jpg" alt="image1"/></a>
+						<div class="sb-description">
+							<h3>Groundbreaking Artist</h3>
+						</div>
+					</li>
+					<li>
+						<a href="#" target="_blank"><img src="../image/7.jpg" alt="image1"/></a>
+						<div class="sb-description">
+							<h3>Selfless Philantropist</h3>
+						</div>
+					</li>
+					<div id="nav-arrows" class="nav-arrows">
+					<a href="#">Next</a>
+					<a href="#">Previous</a>
+				</div>
+				</ul>
+
+				
+
+				
+
+			</div><!-- /wrapper -->
+		   
+		   
+		   <!-- ========== Slider End=================== -->
+           
+          
+</body>
+</html>
